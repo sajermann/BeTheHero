@@ -1,2 +1,2 @@
 # BeTheHero
- Projeto Semana 11 OminiStack
+ Aplicação da Semana 11 OmniStack
