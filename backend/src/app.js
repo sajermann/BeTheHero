@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const { errors } = require('celebrate');
 const routes = require('./routes');
 
 const app = express();
@@ -7,7 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Estamos falando para o express pegar as requisições e converter para um Json
 app.use(routes);
-app.listen(3333);
+
+app.use(errors());
+
+module.exports = app;
 
 //Rota é o conjunto completo da url, o que vem depois da barra é o recurso. /usuarios (http://localhost/usuarios) por exemplo é um recurso
 
